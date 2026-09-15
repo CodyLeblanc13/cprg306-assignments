@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body> {/* /*Children will represent every page*/}
+      <body>{children}</body>{/* /*Children will represent every page*/}
     </html>
   );
 }
