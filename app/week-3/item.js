@@ -1,11 +1,11 @@
 export default function Item({ item }) {
   const { name, quantity, category } = item;
   return (
-    <li className="bg-slate-800 p-3 m-3 flex flex-col">
-      <h2 className="text-2xl font-bold ">{name}</h2>
-      <p>
+    <ul className="bg-slate-800 my-4 p-2 w-96">
+      <li className="font-bold text-2xl">{name}</li>
+      <li className="text-lg">
         Buy {quantity} in {category}
-      </p>
-    </li>
+      </li>
+    </ul>
   );
 }

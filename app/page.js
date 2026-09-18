@@ -7,10 +7,12 @@ export default function Page() {
       <section className="text-center">
       <Link href="/week-2" className="text-underline text-blue-500">
         Go to Week 2
+        <p className="text-white ">My name and github link</p>
       </Link>
       <br></br>
       <Link href="/week-3" className="text-underline text-blue-500">
         Go to Week 3
+        <p className="text-white">Styled Shopping List</p>
       </Link>
       </section>
     </main>
