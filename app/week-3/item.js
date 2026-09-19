@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Item({ name, quantity, category }) {
     return (
         <li className="flex items-center justify-between px-4 py-2 last:border-b-0 mb-0.5 bg-purple-100 rounded">
@@ -8,3 +9,16 @@ export default function Item({ name, quantity, category }) {
         </li>
     );
 }
+=======
+export default function Item({ item }) {
+  const { name, quantity, category } = item;
+  return (
+    <ul className="bg-slate-800 my-4 p-2 w-96">
+      <li className="font-bold text-2xl">{name}</li>
+      <li className="text-lg">
+        Buy {quantity} in {category}
+      </li>
+    </ul>
+  );
+}
+>>>>>>> ae5d3504b2d3ea15bfe8f8c7ee1f06c363491db4

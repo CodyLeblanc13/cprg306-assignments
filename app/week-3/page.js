@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import ItemList from "./item-list";
 import Link from "next/link";
@@ -18,3 +19,18 @@ export default function Page() {
     </main>
   );
 }
+=======
+import Home from "../home";
+import ItemList from "./item-list";
+export default function page() {
+  return (
+    <main className="mx-auto max-w-md p-4">
+      <h1 className="text-4xl font-bold text-purple-500">
+        Shopping List
+      </h1>
+      <ItemList />
+      <Home />
+    </main>
+  );
+}
+>>>>>>> ae5d3504b2d3ea15bfe8f8c7ee1f06c363491db4
