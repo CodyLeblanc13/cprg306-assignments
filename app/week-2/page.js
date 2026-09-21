@@ -1,5 +1,5 @@
 import StudentInfo from "./student-info";
-import BackHome from "../backhome";
+import BackHome from "../components/backhome";
 
 export default function Page() {
   return (

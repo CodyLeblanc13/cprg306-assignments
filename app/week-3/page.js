@@ -1,5 +1,5 @@
 import ItemList from "./item-list"
-import BackHome from "../backhome";
+import BackHome from "../components/backhome";
 
 export const metadata = {
   title: "Shopping List",
