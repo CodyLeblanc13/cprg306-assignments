@@ -1,11 +1,11 @@
-import Home from "../home-folder/home";
+import Home from "../components/home";
 import StudentInfo from "./student-info";
 export default function Page() {
   return (
     <main>
       <h1>Shopping List</h1>
-      <StudentInfo/>
-      <Home/>
+      <StudentInfo />
+      <Home />
     </main>
   );
 }
