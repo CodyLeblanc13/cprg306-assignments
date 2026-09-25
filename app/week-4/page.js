@@ -4,7 +4,10 @@ import BackHome from "../components/backhome"
 export default function Page() {
     return (
         <main>
-            <NewItem />
+            <div className="flex justify-center flex-col items-center">
+                <NewItem className="flex-1" />
+                <BackHome className="flex-1"/>
+            </div>
         </main>
 
     )
