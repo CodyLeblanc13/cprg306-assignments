@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from "./item"
 
 export default function ItemList() {
   const item1 = {
@@ -72,8 +72,9 @@ export default function ItemList() {
     quantity: 4,
     category: "household",
   };
+
   return (
-    <div>
+    <ul>
       <Item item={item1} />
       <Item item={item2} />
       <Item item={item3} />
@@ -86,6 +87,6 @@ export default function ItemList() {
       <Item item={item10} />
       <Item item={item11} />
       <Item item={item12} />
-    </div>
+    </ul>
   );
 }
