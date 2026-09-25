@@ -1,4 +1,4 @@
-import Home from "../home";
+import Home from "../home-folder/home";
 import ItemList from "./item-list";
 export default function page() {
   return (

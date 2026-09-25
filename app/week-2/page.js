@@ -1,4 +1,4 @@
-import Home from "../home";
+import Home from "../home-folder/home";
 import StudentInfo from "./student-info";
 export default function Page() {
   return (
