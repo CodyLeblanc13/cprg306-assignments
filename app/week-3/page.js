@@ -1,16 +1,16 @@
 import ItemList from "./item-list"
-import BackHome from "../backhome";
 
-export const metadata = {
-  title: "Shopping List",
+ export const metadata = {
+  title: "Shopping List"
 };
 
 export default function Page() {
   return (
-    <main className="bg-slate-950 p-6 flex flex-col items-center">
-      <h1  className="text-amber-500 text-4xl font-bold">Shopping List</h1>
-      <ItemList />
-      <BackHome />
+    <main className="min-h-screen bg-slate-950 px-6 py-10">
+      <div className="mx-auto max-w-xl">
+        <h1 className="text-4xl font-bold text-amber-400">Shopping List</h1>
+        <ItemList />
+      </div>
     </main>
-  );
-}
+  )
+ }

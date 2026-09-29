@@ -13,6 +13,9 @@ export default function Page() {
       <Link href="/week-3" className="hover:text-amber-400">
         Week 3 Assignment
       </Link>
+      <br />
+
+      <Link href="/week-4" className="hover:text-amber-400">Week 4 Assignment</Link>
     </main>
   );
 }
