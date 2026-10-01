@@ -4,6 +4,8 @@ import { useState } from "react";
 export default function NewItem() {
   let [quantity, setQuantity] = useState(1);
 
+  const buttonStyle = "bg-blue-600 p-2 rounded-2xl text-white font-bold text-3xl m-1 disabled:bg-slate-300 disabled:text-slate-400 disabled:cursor-not-allowed disabled:active:scale-100";
+
   const increment = () => {
     if (quantity < 20) {
       setQuantity(quantity + 1);
@@ -24,13 +26,15 @@ export default function NewItem() {
       </p>
       <button
         onClick={increment}
-        className="bg-blue-600 p-2 rounded-2xl text-white px-4 font-bold text-3xl m-1"
+        disabled={quantity >= 20}
+        className={`${buttonStyle} px-4`}
       >
         +
       </button>
       <button
         onClick={decrement}
-        className="bg-blue-600 p-2 rounded-2xl text-white px-5 font-bold text-3xl m-1"
+        disabled={quantity <= 1}
+        className={`${buttonStyle} px-5`}
       >
         -
       </button>
