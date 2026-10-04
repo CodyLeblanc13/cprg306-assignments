@@ -21,8 +21,8 @@ export default function Page() {
           Go to Week 4<p className="text-white">Basic Interactive Component</p>
         </Link>
         <br></br>
-        <Link href="/week-3" className="text-underline text-blue-500">
-          Go to Week 5<p className="text-white"></p>
+        <Link href="/week-5" className="text-underline text-blue-500">
+          Go to Week 5<p className="text-white">Currently Unavailable</p>
         </Link>
       </section>
     </main>
