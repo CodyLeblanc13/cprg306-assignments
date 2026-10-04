@@ -1,5 +1,5 @@
 import Image from "next/image";
-import StudentInfo from "../components/student-info";
+import StudentInfo from "./student-info";
 import Link from "next/link";
 
 export default function Page() {

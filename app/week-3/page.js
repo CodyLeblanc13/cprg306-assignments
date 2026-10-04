@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ItemList from "../components/item-list";
+import ItemList from "./item-list";
 import Link from "next/link";
 
 export const metadata ={

@@ -1,4 +1,4 @@
-import NewItem from "../components/new-item";
+import NewItem from "./new-item";
 import Link from "next/link";
 
 export default function Page() {
