@@ -24,7 +24,7 @@ export default function NewItem() {
       quantity: quantity,
     };
     console.log(item);
-    alert(`Item Added!\n${name} Category: ${category} Quantity: ${quantity}`);
+    alert(`Item Added!\n${name} Category: ${category}, Quantity: ${quantity}`);
   };
 
   const handleNameChange = (e) => {
@@ -34,6 +34,20 @@ export default function NewItem() {
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
   };
+
+  const categoryList = [
+    { value: "Produce", label: "produce" },
+    { value: "Dairy", label: "dairy" },
+    { value: "Bakery", label: "bakery" },
+    { value: "Meat", label: "meat" },
+    { value: "Frozen Foods", label: "frozen foods" },
+    { value: "Canned Goods", label: "canned goods" },
+    { value: "Dry Goods", label: "dry goods" },
+    { value: "Beverages", label: "beverages" },
+    { value: "Snacks", label: "snacks" },
+    { value: "Household", label: "household" },
+    { value: "Other", label: "other" }
+  ];
 
   return (
     <div className="text-center mt-4 p-4 rounded-full w-100 m-auto">
@@ -56,41 +70,12 @@ export default function NewItem() {
           value={category}
           onChange={(e) => handleCategoryChange(e)}
           className="border p-2 m-2 rounded"
-          required
         >
-          <option className="text-black" value="Produce">
-            Produce
-          </option>
-          <option className="text-black" value="Dairy">
-            Dairy
-          </option>
-          <option className="text-black" value="Bakery">
-            Bakery
-          </option>
-          <option className="text-black" value="Meat">
-            Meat
-          </option>
-          <option className="text-black" value="Frozen Foods">
-            Frozen Foods
-          </option>
-          <option className="text-black" value="Canned Goods">
-            Canned Goods
-          </option>
-          <option className="text-black" value="Dry Goods">
-            Dry Goods
-          </option>
-          <option className="text-black" value="Beverages">
-            Beverages
-          </option>
-          <option className="text-black" value="Snacks">
-            Snacks
-          </option>
-          <option className="text-black" value="Household">
-            Household
-          </option>
-          <option className="text-black" value="Other">
-            Other
-          </option>
+          {categoryList.map((cat) => (
+            <option key={cat.label} className="text-black" value={cat.value}>
+              {cat.value}
+            </option>
+          ))}
         </select>
 
         <div>
@@ -100,25 +85,22 @@ export default function NewItem() {
           <p className="text-2xl">{quantity}</p>
           <button
             type="button"
-            onClick={increment}
-            disabled={quantity === 20}
-            className="bg-slate-500 p-2 m-2 rounded text-1xl w-10"
-          >
-            +
-          </button>
-          <button
-            type="button"
             onClick={decrement}
             disabled={quantity === 1}
             className="bg-slate-500 p-2 m-2 rounded text-1xl w-10"
           >
             -
           </button>
+          <button
+            type="button"
+            onClick={increment}
+            disabled={quantity === 20}
+            className="bg-slate-500 p-2 m-2 rounded text-1xl w-10"
+          >
+            +
+          </button>
         </div>
-        <button
-          type="submit"
-          className="bg-green-500 p-2 m-2 rounded text-1xl"
-        >
+        <button type="submit" className="bg-green-500 p-2 m-2 rounded text-1xl">
           Submit
         </button>
       </form>
