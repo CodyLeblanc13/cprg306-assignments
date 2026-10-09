@@ -22,7 +22,7 @@ export default function Page() {
         </Link>
         <br></br>
         <Link href="/week-5" className="text-underline text-blue-500">
-          Go to Week 5<p className="text-white">Currently Unavailable</p>
+          Go to Week 5<p className="text-white">Interactivity with Forms</p>
         </Link>
       </section>
     </main>
