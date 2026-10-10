@@ -102,7 +102,7 @@ export default function NewItem() {
           </button>
         </div>
         <button type="submit" className="bg-green-500 p-2 m-2 rounded text-1xl">
-          Submit
+          Add Item
         </button>
       </form>
     </div>
