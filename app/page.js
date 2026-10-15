@@ -5,6 +5,7 @@ export default function Page() {
     { week: 3, description: "Styled Shopping List" },
     { week: 4, description: "Basic Interactive Component" },
     { week: 5, description: "Interactivity with Forms" },
+    { week: 6, description: "Sorting and Filtering Lists" },
   ];
 
   return (
