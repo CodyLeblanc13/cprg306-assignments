@@ -1,15 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import BackHome from "../components/backhome";
-
-import { useState } from "react";
-
-// export const metadata = {
-//   title: "Shopping List",
-// };
 
 export default function Page() {
   const [items, setItems] = useState(itemsData);
@@ -18,19 +13,24 @@ export default function Page() {
     setItems((prevItems) => [...prevItems, newItem]);
   };
 
-
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 p-6 flex flex-col items-center">
+    <main className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 flex flex-col items-center">
       <title>Shopping List</title>
-      <div className="w-full max-w-md space-y-6">
-        <header className="text-center">
+      <div className="w-full max-w-md space-y-8">
+        <header className="text-center space-y-1">
           <h1 className="text-3xl font-extrabold text-amber-500 tracking-tight">
             Shopping List
           </h1>
+          <p className="text-sm text-slate-400">
+            {items.length} {items.length === 1 ? "item" : "items"} on your list
+          </p>
         </header>
 
-        <NewItem onAddItem={handleAddItem}/>
-        <ItemList items={items}/>
+        <NewItem onAddItem={handleAddItem} />
+
+        <hr className="border-slate-800/80" />
+
+        <ItemList items={items} />
 
         <div className="flex justify-center pt-2">
           <BackHome />

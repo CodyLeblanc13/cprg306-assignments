@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Item from "./item";
 
-export default function ItemList({ items }) {
+export default function ItemList({ items = [] }) {
   const [sortBy, setSortBy] = useState("name");
 
   // 1. Create a sorted copy of the items array
@@ -24,44 +24,37 @@ export default function ItemList({ items }) {
   // 3. Get an alphabetical list of the category names
   const categories = Object.keys(groupByCategory).sort();
 
-  const getButtonClass = (type) =>
-    `px-4 py-2 text-sm font-semibold rounded-xl border transition-all duration-150 active:scale-95 ${
+  const getTabClass = (type) =>
+    `flex-1 py-2 px-3 text-xs font-semibold rounded-lg transition-all duration-150 ${
       sortBy === type
-        ? "bg-amber-500 border-amber-500 text-slate-950 shadow-sm"
-        : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white hover:border-slate-600"
+        ? "bg-amber-500 text-slate-950 shadow-sm font-bold"
+        : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
     }`;
 
   return (
-    <div className="w-full max-w-md">
-      {/* Sort Controls */}
-      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-        <span className="text-xs font-mono uppercase tracking-wider text-slate-500">
-          Sort by:
-        </span>
+    <div className="w-full space-y-5">
+      {/* Unified Segmented Sort Control */}
+      <div className="bg-slate-900/90 border border-slate-800 p-1.5 rounded-xl flex items-center gap-1">
         <button
           type="button"
           onClick={() => setSortBy("name")}
-          className={getButtonClass("name")}
+          className={getTabClass("name")}
         >
-          Name
+          Sort by Name
         </button>
         <button
           type="button"
           onClick={() => setSortBy("category")}
-          className={getButtonClass("category")}
+          className={getTabClass("category")}
         >
-          Category
+          Sort by Category
         </button>
-
-        <span className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">
-          Group by:
-        </span>
         <button
           type="button"
           onClick={() => setSortBy("grouped")}
-          className={getButtonClass("grouped")}
+          className={getTabClass("grouped")}
         >
-          Category
+          Group by Category
         </button>
       </div>
 
@@ -69,11 +62,16 @@ export default function ItemList({ items }) {
       {sortBy === "grouped" ? (
         <div className="space-y-6">
           {categories.map((category) => (
-            <div key={category}>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-amber-500 mb-2 pl-1">
-                {category}
-              </h3>
-              <ul className="w-full space-y-3">
+            <div key={category} className="space-y-2.5">
+              <div className="flex items-center justify-between px-1">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-amber-500">
+                  {category}
+                </h3>
+                <span className="text-xs text-slate-500 font-medium">
+                  {groupByCategory[category].length}
+                </span>
+              </div>
+              <ul className="w-full space-y-2.5">
                 {groupByCategory[category].map((item) => (
                   <Item key={item.id} item={item} />
                 ))}
@@ -82,7 +80,7 @@ export default function ItemList({ items }) {
           ))}
         </div>
       ) : (
-        <ul className="w-full space-y-3">
+        <ul className="w-full space-y-2.5">
           {sortedItems.map((item) => (
             <Item key={item.id} item={item} />
           ))}
