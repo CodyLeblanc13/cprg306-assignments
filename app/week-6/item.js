@@ -1,12 +1,12 @@
 export default function Item({ item }) {
   const { name, quantity, category } = item;
   return (
-    <li className="flex items-center justify-between p-4 m-4 border border-slate-900 rounded-xl bg-slate-600 hover:border-slate-300 transition">
+    <li className="m-4 flex items-center justify-between rounded-xl border border-indigo-300/15 bg-slate-900/60 p-4 shadow-lg shadow-slate-950/20 transition hover:border-teal-300/50">
       <div>
         <h2 className="font-bold text-2xl capitalize">{name}</h2>
-        <p className="text-md text-slate-300 capitalize">Category: {category}</p>
+        <p className="text-md capitalize text-slate-300">Category: {category}</p>
       </div>
-      <p className="text-lg border p-1 rounded-lg">x {quantity}</p>
+      <p className="rounded-lg border border-indigo-300/20 bg-slate-950/60 p-1 text-lg text-teal-200">x {quantity}</p>
     </li>
   );
 }

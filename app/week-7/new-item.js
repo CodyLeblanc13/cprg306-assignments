@@ -59,7 +59,7 @@ export default function NewItem({ onAddItem }) {
     <div className="flex justify-center mt-4 p-4 rounded-full m-auto">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center bg-slate-700 p-4 rounded-lg w-1/2"
+        className="flex w-full max-w-lg flex-col items-center rounded-xl border border-indigo-300/15 bg-slate-900/80 p-6 shadow-xl shadow-slate-950/30"
       >
         <div className="flex flex-col items-center">
           <label htmlFor="itemName" className="text-2xl">
@@ -70,7 +70,7 @@ export default function NewItem({ onAddItem }) {
             placeholder="Item Name"
             value={name}
             onChange={(e) => handleNameChange(e)}
-            className="border p-2 m-2 rounded w-3/4"
+            className="m-2 w-3/4 rounded-lg border border-indigo-300/20 bg-slate-950/70 p-2 text-slate-100 placeholder:text-slate-500 focus:border-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-300/30"
             required
           />
           <label htmlFor="category" className="text-2xl">
@@ -79,7 +79,7 @@ export default function NewItem({ onAddItem }) {
           <select
             value={category}
             onChange={(e) => handleCategoryChange(e)}
-            className="border p-2 m-2 rounded w-3/4"
+            className="m-2 w-3/4 rounded-lg border border-indigo-300/20 bg-slate-950/70 p-2 text-slate-100 focus:border-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-300/30"
           >
             {categoryList.map((cat) => (
               <option key={cat.label} className="text-black" value={cat.value}>
@@ -93,7 +93,7 @@ export default function NewItem({ onAddItem }) {
             type="button"
             onClick={decrement}
             disabled={quantity === 1}
-            className="bg-slate-500 p-2 m-2 rounded text-2xl w-10"
+            className="m-2 w-10 rounded-lg border border-indigo-300/20 bg-slate-800 p-2 text-2xl text-teal-200 transition hover:bg-indigo-900 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
           >
             -
           </button>
@@ -102,12 +102,12 @@ export default function NewItem({ onAddItem }) {
             type="button"
             onClick={increment}
             disabled={quantity === 20}
-            className="bg-slate-500 p-2 m-2 rounded text-2xl w-10"
+            className="m-2 w-10 rounded-lg border border-indigo-300/20 bg-slate-800 p-2 text-2xl text-teal-200 transition hover:bg-indigo-900 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
           >
             +
           </button>
         </div>
-        <button type="submit" className="bg-green-500 p-2 m-2 rounded text-1xl">
+        <button type="submit" className="m-2 rounded-lg bg-teal-400 px-5 py-2 font-semibold text-slate-950 transition hover:bg-teal-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200">
           Add Item
         </button>
       </form>

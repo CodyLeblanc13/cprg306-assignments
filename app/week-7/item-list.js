@@ -16,14 +16,14 @@ export default function ItemList({ items }) {
 
   const getButtonClass = (type) => {
     return sortBy === type
-      ? "bg-purple-600 p-1 m-2 rounded text-lg border border-slate-900"
-      : "bg-slate-500 p-1 m-2 rounded text-lg hover:bg-slate-700 border-slate-500 hover:border-slate-300";
+      ? "m-2 rounded-lg border border-teal-300/50 bg-teal-300 px-3 py-1 text-lg font-semibold text-slate-950"
+      : "m-2 rounded-lg border border-indigo-300/20 bg-slate-800 px-3 py-1 text-lg text-slate-200 transition hover:border-teal-300/50 hover:bg-indigo-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300";
   }
 
   return (
     <div>
       <div className="flex justify-center items-center">
-        <span className="text-md text-slate-400">Sort By: </span>
+        <span className="text-md text-slate-300">Sort By: </span>
         <button
           type="button"
           onClick={() => setSortBy("name")}
