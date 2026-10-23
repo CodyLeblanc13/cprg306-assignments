@@ -25,7 +25,9 @@ export default function NewItem({ onAddItem }) {
       category: category,
       quantity: quantity,
     };
-    onAddItem({...item, id});
+    console.log(item);
+    alert(`Item ${name} Added!`);
+    onAddItem({ ...item, id });
     setName("");
     setCategory("Produce");
     setQuantity(1);
