@@ -6,11 +6,12 @@ export default function Page() {
     { week: 4, description: "Basic Interactive Component" },
     { week: 5, description: "Interactivity with Forms" },
     { week: 6, description: "Sorting and Filtering Lists" },
-    {week:7, description: "Managing State"}
+    {week:7, description: "Managing State"},
+    { week: 8, description: "" },
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 px-6 py-16 text-slate-100 sm:px-10">
+    <main className="min-h-screen bg-linear-to-br from-slate-950 via-indigo-950 to-slate-900 px-6 py-16 text-slate-100 sm:px-10">
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">
           Web Dev 2 · Weekly work

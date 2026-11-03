@@ -23,7 +23,7 @@ export default function ItemList({ items }) {
   return (
     <div>
       <div className="flex justify-center items-center">
-        <span className="text-md text-slate-300">Sort By: </span>
+        <span className="text-lg text-slate-300">Sort By: </span>
         <button
           type="button"
           onClick={() => setSortBy("name")}
