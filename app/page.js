@@ -1,13 +1,13 @@
 import Link from "next/link";
 export default function Page() {
   const WeekLinks = [
-    { week: 2, description: "My name and github link" },
+    { week: 2, description: "My Name and Github Link" },
     { week: 3, description: "Styled Shopping List" },
     { week: 4, description: "Basic Interactive Component" },
     { week: 5, description: "Interactivity with Forms" },
     { week: 6, description: "Sorting and Filtering Lists" },
     {week:7, description: "Managing State"},
-    { week: 8, description: "" },
+    { week: 8, description: "Fetching Data Using an API" },
   ];
 
   return (
