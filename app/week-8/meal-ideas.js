@@ -19,6 +19,10 @@ export default function MealIdeas({ingredient}) {
     }
 
     useEffect(() => {
+        if (!ingredient) {
+            setMeals([]);
+            return;
+        }
         loadMealIdeas();
     }, [ingredient]);
 
